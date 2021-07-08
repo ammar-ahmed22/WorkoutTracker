@@ -51,3 +51,16 @@ export const getTotal = (data) =>{
 
     return total
 }
+
+//Convert from comma-separated to camelcase
+export const convertToCamelCase = str =>{
+    let strArr = str.split('-');
+
+    let camelCased = strArr.map((item, index) => {
+        if (index !== 0){
+            return item.charAt(0).toUpperCase() + item.slice(1)
+        }
+    })
+
+    return strArr[0] + camelCased.join('');
+}

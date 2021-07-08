@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import CustomAreaChart from '../components/CustomAreaChart';
-import CustomPieChart from '../components/CustomPieChart';
-import AddEntry from '../components/AddEntry';
+import CustomAreaChart from './CustomAreaChart';
+import CustomPieChart from './CustomPieChart';
+import AddEntry from './AddEntry';
 
-import bodyData from '../components/bodyData';
+import bodyData from './bodyData';
 import * as helper from '../modules/helperFunctions';
 
 const Dashboard = () =>{
@@ -14,7 +14,7 @@ const Dashboard = () =>{
         modal.classList.toggle('d-block');
     }
 
-    const [data, setData] = useState([]);
+    
     const [biometrics, setBiometrics] = useState();
     const [workouts, setWorkouts] = useState();
     const [diet, setDiet] = useState();
